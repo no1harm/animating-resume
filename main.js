@@ -19,20 +19,6 @@ html {
     position: fixed;
     height: 100%;
 }
-/* 给代码加上一点点高亮 */
-.token.comment {
-    color: slategray;
-}
-.token.property {
-    color: #f92672;
-}
-.token.selector {
-    color: #a6e22e;
-}
-/* 让代码呼吸起来 */
-#code{
-  animation: breathe 1s infinite alternate-reverse;
-}
 /* 调整一下代码框大小 */
 #code {
     border:1px solid transparent;
@@ -44,6 +30,21 @@ html {
     width: 100%;
     height:100%;
 }
+/* 让代码呼吸起来 */
+#code{
+  animation: breathe 1s infinite alternate-reverse;
+}
+/* 给代码加上一点点高亮 */
+.token.comment {
+    color: slategray;
+}
+.token.property {
+    color: #f92672;
+}
+.token.selector {
+    color: #a6e22e;
+}
+
 /*
 * 现在正式开始写 Markdown 啦~
 * 准备一张白纸
@@ -194,23 +195,4 @@ function convertMarkdownToHtml(fn){
     markdownContainer.style = 'background-color:white'
     markdownContainer.replaceWith(div)
     fn && fn.call()
-}
-function fn2(presult){
-    var result2 = `
-#paper {
-    width: 100px;
-    height: 100px;
-    background: white;
-}
-    `
-    var n = 0
-    var timer = setInterval(()=>{
-        n += 1
-        code.innerHTML = presult + result.substring(0,n)
-        code.innerHTML = Prism.highlight(code.innerHTML, Prism.languages.css)
-        styleTag.innerHTML = presult + result.substring(0,n)
-        if(n >= result.length){
-            window.clearInterval(timer)
-        }
-    },50)
 }
