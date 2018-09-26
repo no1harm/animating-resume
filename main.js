@@ -1,7 +1,10 @@
 
 var result = `
 /*
- * 注释
+ * 面试官你好，我是XXX
+ * 只用文字作做我介绍太单调了
+ * 我就用代码来介绍吧
+ * 首先准备一些样式
  *
 */
 * {
@@ -16,7 +19,7 @@ html {
     position: fixed;
     height: 100%;
 }
-/* 加上点高亮 */
+/* 给代码加上一点点高亮 */
 .token.comment {
     color: slategray;
 }
@@ -26,10 +29,11 @@ html {
 .token.selector {
     color: #a6e22e;
 }
-/* 加一个呼吸效果 */
+/* 让代码呼吸起来 */
 #code{
   animation: breathe 1s infinite alternate-reverse;
 }
+/* 调整一下代码框大小 */
 #code {
     border:1px solid transparent;
     padding: 16px;
@@ -41,6 +45,7 @@ html {
     height:100%;
 }
 /*
+* 现在正式开始写 Markdown 啦~
 * 准备一张白纸
 */
 #paper {
@@ -67,15 +72,17 @@ var result2 = `
 }
 `
 var result3 = `
-/* 使用 marked.js 把 markdown 转化成 HTML*/
+/* 使用一个库 marked.js 把 markdown 转化成 HTML*/
 `
 var result4 = `
-/* 还差一点点*/
+/* 还差一点点 */
 .markdown-body {
     padding: 16px;
     background-color: white;
     overflow: auto;
 }
+
+/* Done~ 简历完成啦~ */
 `
 var md = `
 # 简历
